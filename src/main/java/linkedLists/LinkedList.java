@@ -35,15 +35,23 @@ public class LinkedList {
 
     public ListNode pop() {
         if(head == null) return null;
-        ListNode previous = head;
-        previous.next = null;
+        ListNode firstNode = new ListNode(head.data);
         head = head.next;
-        return head;
+        return firstNode;
     }
 
     public ListNode remove() {
         if(head == null) return null;
-        return head.next;
+        if(head.next == null) {
+            head = null;
+            return null;
+        }
+        ListNode iter = head;
+        while(iter.next != null) {
+            iter = iter.next;
+        }
+        iter.next = null;
+        return head;
     }
 
     public void reverse() {

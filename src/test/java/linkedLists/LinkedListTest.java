@@ -80,4 +80,11 @@ public class LinkedListTest {
         System.out.println("Linked List reverses properly");
     }
 
+    @Test
+    public void willPopSingleNode() {
+        LinkedList list = new LinkedList(singleNumber);
+        ListNode n = list.pop();
+        assertEquals(singleNumber[0], n.data);
+        assertEquals(null, list.get());
+    }
 }
