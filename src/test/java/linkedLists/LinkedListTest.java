@@ -55,4 +55,16 @@ public class LinkedListTest {
         assertEquals(num, head.next.data);
     }
 
+    @Test
+    public void willReverseArray() {
+        LinkedList list = new LinkedList(fiveNumbers);
+        list.reverse();
+        ListNode head = list.get();
+        for(int i=0; i<reversedNumbers.length; i++) {
+            assertEquals(reversedNumbers[i], head.data);
+            head = head.next;
+        }
+        System.out.println("Linked List reverses properly");
+    }
+
 }

@@ -50,12 +50,14 @@ public class LinkedList {
         if(head == null) return;
 
         ListNode iter = head;
-        ListNode previous = head;
-        while(iter.next != null) {
-            previous = iter;
+        ListNode previous = null;
+        ListNode current = head;
+        while(iter != null) {
+            current = iter;
             iter = iter.next;
-            iter.next = previous;
-            previous.next = null;
+            current.next = previous;
+            previous = current;
         }
+        head = current;
     }
 }
