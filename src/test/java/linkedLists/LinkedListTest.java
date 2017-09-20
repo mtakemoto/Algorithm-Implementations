@@ -16,4 +16,15 @@ public class LinkedListTest {
         System.out.println("Linked List initializes single element");
     }
 
+    @Test
+    public void willInitializeMultiple() {
+        LinkedList list = new LinkedList(fiveNumbers);
+        ListNode head = list.get();
+        for(int num : fiveNumbers) {
+            assertEquals(num, head.data);
+            head = head.next;
+        }
+        System.out.println("List initializes multiple elements");
+    }
+
 }
