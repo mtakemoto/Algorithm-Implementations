@@ -56,6 +56,19 @@ public class LinkedListTest {
     }
 
     @Test
+    public void willHandleReverseEmptyList() {
+        LinkedList list = new LinkedList(emptyArray);
+        list.reverse();
+    }
+
+    @Test
+    public void willHandleReverseSingleElement() {
+        LinkedList list = new LinkedList(singleNumber);
+        list.reverse();
+        assertEquals(singleNumber[0], list.get().data);
+    }
+
+    @Test
     public void willReverseArray() {
         LinkedList list = new LinkedList(fiveNumbers);
         list.reverse();
