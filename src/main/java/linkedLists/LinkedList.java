@@ -49,15 +49,15 @@ public class LinkedList {
     public void reverse() {
         if(head == null) return;
 
-        ListNode iter = head;
         ListNode previous = null;
         ListNode current = head;
-        while(iter != null) {
-            current = iter;
-            iter = iter.next;
+        ListNode next;
+        while(current != null) {
+            next = current.next;
             current.next = previous;
             previous = current;
+            current = next;
         }
-        head = current;
+        head = previous;
     }
 }
