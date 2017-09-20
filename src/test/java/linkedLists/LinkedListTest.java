@@ -35,4 +35,24 @@ public class LinkedListTest {
         System.out.println("List initializes multiple elements");
     }
 
+    @Test
+    public void appendsToNull() {
+        int num = 7;
+        LinkedList list = new LinkedList();
+        list.append(num);
+        ListNode head = list.get();
+        assertEquals(head.data, num);
+        System.out.println("List appends properly when null");
+    }
+
+    @Test
+    public void appendsToFullArray() {
+        int num = 7;
+        LinkedList list = new LinkedList(singleNumber);
+        list.append(num);
+        ListNode head = list.get();
+        assertEquals(singleNumber[0], head.data);
+        assertEquals(num, head.next.data);
+    }
+
 }

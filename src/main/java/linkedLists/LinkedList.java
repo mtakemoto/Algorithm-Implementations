@@ -3,6 +3,10 @@ package linkedLists;
 public class LinkedList {
     private ListNode head = null;
 
+    LinkedList() {
+        return;
+    }
+
     LinkedList(int[] a) {
         if(a.length == 0) return;
         head = new ListNode(a[0]);
@@ -20,7 +24,7 @@ public class LinkedList {
 
     public ListNode append(int data) {
         ListNode newNode = new ListNode(data);
-        if(this.head == null) return newNode;
+        if(this.head == null) this.head = newNode;
         ListNode iter = head;
         while(iter.next != null) {
             iter = iter.next;
