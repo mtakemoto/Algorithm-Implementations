@@ -6,9 +6,13 @@
 package Sorting;
 
 public class MergeSort {
+
+    public static void Sort(int[] A) {
+        if(A == null) return;
+        Sort(A, 0, A.length-1);
+    }
     
     public static void Sort(int[] A, int low, int high) {
-        if(A == null) return;
         if(low < high) {
             int mid = (int)Math.floor((low + high) / 2);
             Sort(A, low, mid);

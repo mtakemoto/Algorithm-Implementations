@@ -8,10 +8,6 @@ package sorting;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author doyou
- */
 public class MergeSortTest {
     
     public MergeSortTest() {
@@ -21,7 +17,7 @@ public class MergeSortTest {
     @Test
     public void testNullInput() {
         System.out.println("Null input");
-        Sorting.MergeSort.Sort(null, 0, 0);
+        Sorting.MergeSort.Sort(null);
     }
     
     @Test
@@ -29,7 +25,7 @@ public class MergeSortTest {
         System.out.println("Single element sort");
         int[] initial = {1};
         int[] expected = {1};
-        Sorting.MergeSort.Sort(initial, 0, initial.length-1);
+        Sorting.MergeSort.Sort(initial);
         assertArrayEquals(initial, expected);
     }
     
@@ -38,7 +34,7 @@ public class MergeSortTest {
         System.out.println("Odd number of elements");
         int[] initial = {10, 7, 9, 6, 8};
         int[] expected = {6, 7, 8, 9, 10};
-        Sorting.MergeSort.Sort(initial, 0, initial.length-1);
+        Sorting.MergeSort.Sort(initial);
         assertArrayEquals(initial, expected);
     }
     
@@ -47,8 +43,8 @@ public class MergeSortTest {
         System.out.println("Even number of elements");
         int[] initial = {4, 2, 1, 3};
         int[] expected = {1, 2, 3, 4};
-        Sorting.MergeSort.Sort(initial, 0, initial.length-1);
-        assertArrayEquals(initial, expected); 
+        Sorting.MergeSort.Sort(initial);
+        assertArrayEquals(initial, expected);
     }
     
     @Test
@@ -56,7 +52,7 @@ public class MergeSortTest {
         System.out.println("All elements are equal");
         int[] initial = {1, 1, 1};
         int[] expected = {1, 1, 1};
-        Sorting.MergeSort.Sort(initial, 0, initial.length-1);
+        Sorting.MergeSort.Sort(initial);
         assertArrayEquals(initial, expected);
     }
     
@@ -65,7 +61,7 @@ public class MergeSortTest {
         System.out.println("Handles duplicate elements");
         int[] initial = {2, 2, 1, 3, 4, 4, 5};
         int[] expected = {1, 2, 2, 3, 4, 4, 5};
-        Sorting.MergeSort.Sort(initial, 0, initial.length-1);
+        Sorting.MergeSort.Sort(initial);
         assertArrayEquals(initial, expected);
     }
 }
