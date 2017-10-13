@@ -6,6 +6,10 @@ package strings;
  */
 
 public class PalindromeSubstring {
+    /* Use a moving window approach
+       Decrease the window size and move from left to right
+       O(n^2) run time via the arithmetic sequence
+     */
     public String solution(String s) {
         if(s == null) return null;
         int windowSize = s.length();

@@ -18,8 +18,13 @@ public class PalindromeSubstringTest {
     }
 
     @Test
-    public void isPalindromeWorks() throws Exception {
-        testClass.isPalindrome(longPalindrome);
+    public void palindromeDetected() throws Exception {
+        assertEquals(true, testClass.isPalindrome(longPalindrome));
+    }
+
+    @Test
+    public void palindromeNotDetected() throws Exception {
+        assertEquals(false, testClass.isPalindrome(notPalindrome));
     }
 
     @Test
