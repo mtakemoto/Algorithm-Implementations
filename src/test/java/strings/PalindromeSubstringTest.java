@@ -55,4 +55,10 @@ public class PalindromeSubstringTest {
         assertEquals(palindrome, testClass.solution(s));
     }
 
+    @Test
+    public void solutionNone() throws Exception {
+        String s = "" + notPalindrome.charAt(0);
+        assertEquals(s, testClass.solution(notPalindrome));
+    }
+
 }
